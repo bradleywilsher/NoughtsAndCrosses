@@ -1,0 +1,22 @@
+{
+  "name": "noughtsandcrosses",
+  "version": "1.0.0",
+  "description": "xoxoxoxo",
+  "main": "academy.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradleywilsher/NoughtsAndCrosses.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradleywilsher/NoughtsAndCrosses/issues"
+  },
+  "homepage": "https://github.com/bradleywilsher/NoughtsAndCrosses#readme",
+  "dependencies": {
+    "jest": "^26.4.2"
+  }
+}
