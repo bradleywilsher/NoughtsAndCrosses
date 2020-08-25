@@ -82,7 +82,7 @@ function checkWinner() {
         //these checks could be removed into one function 
         if (cScore === 3) {
             crossWins = true;
-            return true;
+            //return true;
         } 
         if (nScore === 3) {          
             noughtWon = true

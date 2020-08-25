@@ -29,29 +29,30 @@ test("Take a double move", () => {
     expect(getBoard()).toStrictEqual(expected_output);
 })
 
+test("reset", () => {
+    resetGame();
+    expected_output = [[null, null, null], [null, null, null], [null, null, null]];
 
-test("check win", () => {
-
-    //Cross
-    takeTurn(0,0);
-    //Nought
-    takeTurn(1,1);
-     //Cross
-    takeTurn(0,1);
-    //Nought
-    takeTurn(1,2);
-     
-
-
-   
-    expected_output = true;
-
-    //Winning move is (0,2)
-    expect(checkWinner()).toStrictEqual(true);
-
-    
-    
-
-
-
+    expect(getBoard()).toStrictEqual(expected_output);
 })
+
+
+
+//WIP
+// test("check win", () => {
+
+//     //Cross
+//     takeTurn(0,0);
+//     //Nought
+//     takeTurn(1,1);
+//      //Cross
+//     takeTurn(0,1);
+//     //Nought
+//     takeTurn(1,2);
+     
+//     expected_output = true;
+//     //Winning move is (0,2)
+
+//     expect(takeTurn()).toStrictEqual(true);
+
+// })
