@@ -1,5 +1,5 @@
-// Make your changes to store and update game state in this file
 
+// Make your changes to store and update game state in this file
 const cross = {
     color: "blue"
 }
@@ -16,7 +16,6 @@ let noughtWins = 0
 let crossWon = false
 let noughtWon = false
 
-
 // Take the row and column number between 0 and 2 
 // (inclusive) and update the game state.
 function takeTurn(row, column) {
@@ -30,14 +29,11 @@ function takeTurn(row, column) {
         } else {
             isCross = true;
             myBoard[row][column] = "nought";
-            
         }
     } else {
         console.log("space occupied")
     }
     console.log("Ai turn returned this number: " + aiTurn(0,2));
- 
-    
 }
 
 function aiTurn(min, max) {
@@ -71,12 +67,10 @@ function checkWinner() {
         console.log("It's a draw!");
     }
 
-
     //Horizontal win
     let cScore =0;
     let nScore = 0;
     for (let i = 0; i < myBoard.length; i++) {
-
         for (let j = 0; j < myBoard[i].length; j++) {
             if (myBoard[i][j] === "cross") {
                 cScore++;
@@ -88,6 +82,7 @@ function checkWinner() {
         //these checks could be removed into one function 
         if (cScore === 3) {
             crossWins = true;
+            return true;
         } 
         if (nScore === 3) {          
             noughtWon = true
@@ -133,7 +128,6 @@ function checkWinner() {
         }
     } 
 
-
     if (myBoard[0][2] === myBoard[1][1] && myBoard[1][1] === myBoard[2][0]) {
         if(myBoard[1][1] === "cross") {
             crossWon = true
@@ -141,7 +135,7 @@ function checkWinner() {
             noughtWon = true
         }
     } 
-    playerScore()
+    //playerScore()
     // if (crossWon){
     //     crossWins++
     //     crossWon = false
@@ -174,3 +168,13 @@ function getBoard() {
 //console.log(myBoard[0].length);
 
 getBoard();
+
+
+//make sure to put tests at the bottom so everything is defined
+module = module || {};
+module.exports = {
+    takeTurn: takeTurn,
+    checkWinner: checkWinner,
+    resetGame: resetGame,
+    getBoard: getBoard,
+}
